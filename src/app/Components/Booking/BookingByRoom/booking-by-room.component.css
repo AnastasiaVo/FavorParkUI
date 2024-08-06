@@ -1,0 +1,223 @@
+/* src/app/components/room/booking-by-room.component.css */ 
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600&display=swap');
+
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.page-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.logo svg {
+  height: 50px;
+}
+
+.navbar {
+  display: flex;
+}
+
+.navbar a {
+  text-decoration: none;
+  font-size: larger;
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-variation-settings: "slnt" 0;
+}
+
+
+button, a { cursor: pointer; }
+
+.navigation {
+  padding: 24px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(15, 81, 50, 0.7);
+}
+
+.nav-link {
+  color: #f0be39;
+  font-weight: 500;
+  font-size: 14px;
+  
+  margin: 0 8px;
+  transition: .2s;
+  
+  &.active {
+      color: var(--main-font-color);
+}
+  
+  &:not(.active):hover {
+      color: var(--buttons-color-primary);
+  }
+}
+
+.user-profile .profile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 30%; 
+  cursor: pointer;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: smaller;
+}
+
+/*Main*/
+.main-section {
+    position: relative;
+    text-align: center;
+    color:#093624;
+    width: 100%;
+
+    background-color: white;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+
+    flex: 1 0 auto;
+    padding-bottom: 340px;
+    padding-top: 180px;
+}
+
+/*Form*/
+.booking-form-container {
+    background-color: #0c4830;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.booking-form {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 80%;
+    
+    font-family: "Inter", serif;
+    font-optical-sizing: auto;
+}
+
+.booking-form .form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.booking-form .form-group label {
+    color: #fff;
+}
+
+.booking-form .form-group input {
+    margin-top: 10px;
+}
+
+.form-button button {
+    background-color: #f0be39;
+    color: #000;
+    border: none;
+    padding: 15px 25px;
+    cursor: pointer;
+    margin-left: auto; 
+    align-items: center;
+    margin-top: 30px;
+    border-radius: 5px;
+}
+
+.image{
+    padding-top: 50px;
+}
+
+/*Rooms*/
+
+/*One bed*/
+.one-bed, .two-bed{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start; /* Вирівнює елементи по верхньому краю */
+  background-color: #fff;
+  border: 1px solid black; /* Додає чіткі чорні межі */
+  padding: 20px;
+  margin-bottom: 20px;
+  color: black;
+}
+
+.room-description {
+  flex: 1;
+  display: flex;
+  flex-direction: row; /* Змінює напрямок на рядок */
+  align-items: flex-start; /* Вирівнює елементи по верхньому краю */
+}
+
+ul {
+  list-style-type: none;
+}
+
+.room-description-text {
+  flex: 1;
+  margin-right: 20px;
+  width: 70px;
+  margin-top: 30px;
+}
+
+.room-description h3{
+  font-weight: 700;
+}
+
+.show-more{
+  border: 0;
+  background-color: white;
+  color:#f0be39;
+}
+
+.room-description img {
+  width: 400px; /* Зменшує розмір зображення */
+  height: 200px;
+  margin-right: 10px; /* Додає відступ між зображенням та текстом */
+}
+
+.room-booking {
+  padding: 10px 20px;
+  border: none;
+  width: 300px;
+  border-radius: 5px;
+  background-color: #f0be39;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  align-items: center;
+}
+
+.booking h3{
+  font-family: "Inter", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  margin-top: 40px;
+}
+
+.footer {
+    padding: 20px;
+    background-color:#093624;
+    color: #fff;
+    text-align: center;
+    flex-shrink: 0;
+}
+
+.pet-frienly {
+    height: 50px;
+}
+
+.contacts-section {
+    margin-top: 20px;
+}
+    

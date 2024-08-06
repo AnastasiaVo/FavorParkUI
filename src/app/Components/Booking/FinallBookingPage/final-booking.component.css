@@ -1,0 +1,202 @@
+/* src/app/components/room/booking-by-room.component.css */ 
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600&display=swap');
+
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.page-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.logo svg {
+  height: 50px;
+}
+
+.navbar {
+  display: flex;
+}
+
+.navbar a {
+  text-decoration: none;
+  font-size: larger;
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-variation-settings: "slnt" 0;
+}
+
+
+button, a { cursor: pointer; }
+
+.navigation {
+  padding: 24px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(15, 81, 50, 0.7);
+}
+
+.nav-link {
+  color: #f0be39;
+  font-weight: 500;
+  font-size: 14px;
+  
+  margin: 0 8px;
+  transition: .2s;
+  
+  &.active {
+      color: var(--main-font-color);
+}
+  
+  &:not(.active):hover {
+      color: var(--buttons-color-primary);
+  }
+}
+
+.user-profile .profile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 30%; 
+  cursor: pointer;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: smaller;
+}
+
+/*Main*/
+
+
+.main-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-top: 200px;
+  font-size: larger;
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-variation-settings: "slnt" 0;
+}
+
+.guest-information {
+  border: 1px solid black;
+  padding-top: 20px;
+  padding-left: 20px;
+  margin-bottom: 30px;
+  margin-left: 40px;
+  width: 55%;
+  margin-right: 20px;
+}
+
+.reservation-details {
+  margin-right: 30px;
+  width: 35%;
+  border: 1px solid black;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.reservation-details h2{
+  margin-top: 40px;
+}
+
+.total{
+  margin-top: 20px;
+  font-weight: bold ;
+}
+
+
+.checkbox-container {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.checkbox-container input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+.confirm-button {
+  background-color: #f0be39;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.personal-information h2, .payment-type h2 {
+  background-color:#093624;
+  color: white;
+  padding: 10px;
+  width: 400px;
+  position: relative;
+  border-radius: 5px;
+}
+
+.booking-type button{
+  color: #f0be39;
+  margin-left: 10px;
+  background-color: #fff;
+  border-color:#f0be39;
+  margin-bottom: 10px;
+  font-size: 15px;
+}
+
+.personal-information h2::after, .payment-type h2::after {
+  content: '▼';
+  position: absolute;
+  right: 10px;
+}
+
+.personal-information.show h2::after, .payment-type.show h2::after {
+  content: '▲';
+}
+
+.personal-information div, .payment-type div {
+  border-color: black;
+  padding: 10px;
+  margin-top: 10px;
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+input[type="text"], input[type="email"], input[type="tel"], select {
+  width: 40%;
+  padding: 10px;
+  margin: 5px 0;
+  border: 1px solid yellow;
+  font-size: 15px;
+}
+
+
+.footer {
+    padding: 20px;
+    background-color:#093624;
+    color: #fff;
+    text-align: center;
+    flex-shrink: 0;
+}
+
+.pet-frienly {
+    height: 50px;
+}
+
+.contacts-section {
+    margin-top: 20px;
+}
+    

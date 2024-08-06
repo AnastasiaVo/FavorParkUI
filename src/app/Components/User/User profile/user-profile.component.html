@@ -1,0 +1,37 @@
+<div class="user-profile">
+    <mat-card>
+      <mat-card-title>User Profile</mat-card-title>
+      <mat-card-content>
+        <form [formGroup]="profileForm">
+          <mat-form-field>
+            <mat-label>First Name</mat-label>
+            <input matInput formControlName="firstName">
+          </mat-form-field>
+          <mat-form-field>
+            <mat-label>Last Name</mat-label>
+            <input matInput formControlName="lastName">
+          </mat-form-field>
+          <mat-form-field>
+            <mat-label>Phone Number</mat-label>
+            <input matInput formControlName="phoneNumber">
+          </mat-form-field>
+          <button mat-flat-button color="primary" (click)="updateUserProfile()">Update Profile</button>
+        </form>
+      </mat-card-content>
+    </mat-card>
+  
+    <mat-card *ngIf="bookings.length">
+      <mat-card-title>Booked Rooms</mat-card-title>
+      <mat-card-content>
+        <mat-list>
+          <mat-list-item *ngFor="let booking of bookings">
+            <h3 matLine>Room: {{ booking.roomNumber }}</h3>
+            <p matLine>Booking Date: {{ booking.bookingDate | date }}</p>
+            <p matLine>Check-in Date: {{ booking.checkInDate | date }}</p>
+            <p matLine>Check-out Date: {{ booking.checkOutDate | date }}</p>
+          </mat-list-item>
+        </mat-list>
+      </mat-card-content>
+    </mat-card>
+  </div>
+  

@@ -1,0 +1,320 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600&display=swap');
+
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000; /* Це забезпечує, що header завжди знаходиться зверху */
+}
+
+
+.logo svg {
+    height: 50px;
+}
+
+body, html {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: var(--app-bg);
+    transition: .2s;
+}
+
+.navbar {
+    display: flex;
+}
+
+.navbar a {
+    text-decoration: none;
+    font-size: larger;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-variation-settings: "slnt" 0;
+}
+
+
+button, a { cursor: pointer; }
+
+.navigation {
+    padding: 24px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(15, 81, 50, 0.7);
+}
+
+.nav-link {
+    color: #f0be39;
+    font-weight: 500;
+    font-size: 14px;
+    
+    margin: 0 8px;
+    transition: .2s;
+    
+    &.active {
+        color: var(--main-font-color);
+}
+    
+    &:not(.active):hover {
+        color: var(--buttons-color-primary);
+    }
+}
+.user-profile .profile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 30%; 
+    cursor: pointer;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: smaller;
+}
+
+
+.input-text {
+	border-radius: 2px;
+	background-color: #f4f4f4;
+	box-shadow: inset 0px 1px 1px 0px rgba(0, 0, 0, 0.25);
+	padding-left: 11px;
+	position: relative;
+	height: 46px;
+	line-height: 46px;
+}
+
+.ukraine_promo{
+    background-image: url('https://jesushouseaberdeen.org/wp-content/uploads/2020/05/wheat-field-against-sun-light.jpg');
+    background-size: cover;
+    background-position: center;
+
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    margin-left: 40px;
+    margin-right: 70px;
+    width: 500px;
+    height: 300px;
+    align-items: center;
+}
+
+.ukraine_promo h2{
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-size: 40px;
+    font-variation-settings: "slnt" 0;
+    margin-top: 90px;
+    color:#093624;
+}
+/*Search a room form*/
+.booking-form-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    height: 100%;
+    margin-right: 80px;
+
+    padding-top: 170px;
+    
+}
+
+.booking-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    height: 25%;
+    max-width: 350px;
+    padding: 30px;
+    background-color: rgba(240, 190, 57, 0.6);
+    border-radius: 10px;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-variation-settings: "slnt" 0;
+    margin-bottom: 80px;
+}
+
+.booking-form .form-group {
+    width: 100%;
+    margin-bottom: 20px;
+    color:#ffffff;
+    font-family: "Inter", sans-serif;
+    font-weight: 600;
+    
+}
+
+
+.booking-form .form-group label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.booking-form .form-group input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: inset 0px 1px 1px 0px rgba(0, 0, 0, 0.25);
+    background-color: #d8d8d8;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-variation-settings: "slnt" 0;
+    
+}
+
+.booking-form button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgba(15, 81, 50, 0.7);
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.booking-form button:hover {
+    background-color: #093624;
+}
+
+
+.main-section {
+    position: relative;
+    text-align: center;
+    color: white;
+    padding: 20px;
+
+    background-image: url('https://favorparkhotel.com/wp-content/uploads/2021/10/ZOL_2181_3000px-scaled.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+
+}
+
+.details-section {
+    display: flex;
+    flex-direction: row-reverse; 
+    justify-content: flex-end;
+    height: 700px; 
+    background-size: cover;
+    background-position: center;
+    background-color: #d8d8d8;
+    align-items: center;
+    
+}
+
+.block1 {
+    background-image: url('https://favorparkhotel.com/wp-content/uploads/2021/10/ZOL_2007_3000px-scaled.jpg');
+    background-size: cover;
+    background-position: center;
+    width: 80%;
+    height: 80%; 
+    align-items: center;
+}
+
+.rooms_description{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    width: 50%;
+    max-width: 350px;
+    padding: 30px;
+    background-color: rgba(15, 81, 50, 0.7);
+    border-radius: 10px;
+    margin-left: 60px;
+    margin-top: 80px;
+}
+
+.rooms_description button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #f0be39;
+    color: white;
+    cursor: pointer;
+    
+    transition: background-color 0.3s ease;
+}
+
+.rooms_description button:hover {
+    background-color: #f0be39;
+}
+
+
+.about-section {
+    display: flex;
+    flex-direction: row; 
+    justify-content: flex-end;
+    height: 700px; 
+    background-size: cover;
+    background-position: center;
+    background-color: #d8d8d8;
+    align-items: center;
+
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-variation-settings: "slnt" 0;
+
+}
+
+.block2 {
+    background-image: url('https://favorparkhotel.com/wp-content/uploads/2021/10/ZOL_6960-scaled-e1634211942282.jpg');
+    background-size: cover;
+    background-position: center;
+    width: 80%;
+    height: 80%; 
+    align-items: center;
+}
+
+.about{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    width: 50%;
+    max-width: 350px;
+    padding: 30px;
+    background-color: rgba(15, 81, 50, 0.7);
+    border-radius: 10px;
+    margin-left: 500px;
+    margin-top: 200px;
+}
+
+.about button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #f0be39;
+    color: white;
+    cursor: pointer;
+    
+    transition: background-color 0.3s ease;
+}
+
+.about button:hover {
+    background-color: #f0be39;
+}
+
+.footer {
+    padding: 20px;
+    background-color:#093624;
+    color: #fff;
+    text-align: center;
+}
+
+
+.pet-frienly {
+    height: 50px;
+}
+
+.contacts-section {
+    margin-top: 20px;
+}

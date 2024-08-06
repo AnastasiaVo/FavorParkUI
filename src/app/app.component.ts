@@ -1,13 +1,24 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { RouterModule, RouterOutlet} from '@angular/router';
+import { AuthService } from './Services/auth.service';
+
+import { MaterialModule } from './material/material.module';
 
 @Component({
   selector: 'app-root',
-  standalone: true,
-  imports: [RouterOutlet],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrls: ['./app.component.css'],
+  standalone: true,
+  imports: [RouterOutlet, MaterialModule, RouterModule]
 })
 export class AppComponent {
-  title = 'FavorParkUI';
+  title = 'FavorParkHotel';
+
+  constructor(
+    private as: AuthService
+  ) {}
+
+  public get isLoggedIn() : boolean{
+    return this.as.isAuthenticated();
+  }
 }

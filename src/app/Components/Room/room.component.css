@@ -1,0 +1,232 @@
+/* src/app/components/room/room.component.css */ 
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600&display=swap');
+
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.page-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.logo svg {
+  height: 50px;
+}
+
+.navbar {
+  display: flex;
+}
+
+.navbar a {
+  text-decoration: none;
+  font-size: larger;
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-variation-settings: "slnt" 0;
+}
+
+
+button, a { cursor: pointer; }
+
+.navigation {
+  padding: 24px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(15, 81, 50, 0.7);
+}
+
+.nav-link {
+  color: #f0be39;
+  font-weight: 500;
+  font-size: 14px;
+  
+  margin: 0 8px;
+  transition: .2s;
+  
+  &.active {
+      color: var(--main-font-color);
+}
+  
+  &:not(.active):hover {
+      color: var(--buttons-color-primary);
+  }
+}
+
+.user-profile .profile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 30%; 
+  cursor: pointer;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: smaller;
+}
+
+
+.main-section {
+  position: relative;
+  text-align: center;
+  color: white;
+  /* padding: 20px; */
+  width: 100%;
+
+  /*background-image: url('https://favorparkhotel.com/wp-content/uploads/2021/09/ZOL_7089-scaled.jpg'); */
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+
+  flex: 1 0 auto;
+  padding-bottom: 340px;
+
+}
+.app-image-slider{
+  width: 100%;
+  height: 50%;
+  position: relative;
+  z-index: 1;
+}
+
+.page_top{
+  width: 50%;
+  max-width: 350px;
+  padding: 30px;
+  background-color: rgb(240, 190, 57, 0.7);
+  border-radius: 5px;
+  margin-left: 100px;
+  margin-top: -150px;
+  
+  position: relative;
+  z-index: 1;
+}
+
+.room-list {
+  display: inline-block;
+  width: 100%;
+  height: 1200px;
+  background-size: cover;
+  background-position: center;
+  background-color: #ffffff;
+  align-items: center;
+  
+}
+
+.block1 {
+  background-image: url('https://favorparkhotel.com/wp-content/uploads/2021/09/ZOL_3481-HDR-Pano_3000px-scaled.jpg');
+  background-size: cover;
+  background-position: center;
+  width: 90%;
+  height: 40%; 
+  align-items: center;
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  margin-top: 50px;
+}
+
+.standart_room{
+  width: 50%;
+  max-width: 350px;
+  padding: 30px;
+  background-color: rgba(15, 81, 50, 0.7);
+  border-radius: 5px;
+  margin-left: 900px;
+  margin-top: 100px;
+}
+
+.standart_room button, .business_room button, .suite_room button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #f0be39;
+  color: white;
+  cursor: pointer;
+  
+  transition: background-color 0.3s ease;
+}
+
+.standart_room button:hover, .business_room button:hover, .suite_room button:hover{
+  background-color: rgb(240, 190, 57);
+}
+
+.block2 {
+  background-image: url('https://favorparkhotel.com/wp-content/uploads/2021/09/ZOL_3300-Pano_3000px-scaled.jpg');
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 40%; 
+  align-items: center;
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  margin-top: 80px;
+}
+
+.business_room{
+  width: 50%;
+  max-width: 350px;
+  padding: 30px;
+  background-color: rgba(15, 81, 50, 0.7);
+  border-radius: 5px;
+  margin-right: 500px;
+  margin-top: 140px;
+}
+
+
+.block3 {
+  background-image: url('https://favorparkhotel.com/wp-content/uploads/2021/09/ZOL_2597_16x9_3000px-scaled.jpg');
+  background-size: cover;
+  background-position: center;
+  width: 90%;
+  height: 40%; 
+  align-items: center;
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  margin-top: 80px;
+}
+
+.suite_room{
+  width: 50%;
+  max-width: 350px;
+  padding: 30px;
+  background-color: rgba(15, 81, 50, 0.7);
+  border-radius: 5px;
+  margin-left: 900px;
+  margin-top: 100px;
+}
+
+
+.footer {
+  padding: 20px;
+  background-color:#093624;
+  color: #fff;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+
+.pet-frienly {
+  height: 50px;
+}
+
+.contacts-section {
+  margin-top: 20px;
+}
+  

@@ -1,0 +1,104 @@
+:host {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: url('https://favorparkhotel.com/wp-content/uploads/2021/10/ZOL_0048-scaled.jpg') no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+  background-color: rgba(0, 0, 0, 0.5);
+  background-blend-mode: multiply;
+  backdrop-filter: blur(50px);
+  -webkit-backdrop-filter:blur(50px);
+}
+
+
+
+.mat-form-field {
+  width: 100%;
+  min-width: 300px;
+}
+
+.content{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.login-form{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 80vw;
+}
+
+.buttons{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 3vh;
+}
+
+mat-card{
+  width: 65vw;
+  gap: 3vh;
+  background-color: rgb(240, 190, 57, 0.7);
+}
+
+mat-form-field{
+  width: 75%;
+}
+
+mat-card-title,
+mat-card-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+mat-card-title{
+  margin-top: 3vh;
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-variation-settings: "slnt" 0;
+  color: white;
+}
+
+mat-card-content{
+  gap: 0vh;
+}
+
+.error {
+  padding: 16px;
+  width: 300px;
+  color: white;
+  background-color: red;
+}
+
+.login_button{
+    padding: 10px 30px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgba(15, 81, 50, 0.7);
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.register_button{
+  padding: 10px 40px;
+  border: none;
+  border-radius: 5px;
+  color: rgba(15, 81, 50);
+  border-color: rgba(15, 81, 50);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+

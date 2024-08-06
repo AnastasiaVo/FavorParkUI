@@ -1,0 +1,114 @@
+<header class="header">
+    <section class="navigation">
+    <div class="logo">
+        <img src="assets/logo.svg" alt="Favor Park Hotel Logo">
+    </div>
+    <div class="navbar">
+        <a routerLink="/aboutUs"  class="nav-link ">ABOUT US</a>
+        <a routerLink="/rooms"  class="nav-link " (click)="navigateToRoomPage()">ROOM</a>
+        <a routerLink="/booking" class="nav-link " (click)="navigateToBookingPage()" >BOOKING</a>
+        <a href="#contacts" class="nav-link ">CONTACTS</a>
+    </div>
+    <div class="user-profile">
+      <img src="assets/portrait.svg" alt="user icon" class="profile" (click)="navigateToProfileOrLogin()"/>
+  </div>
+    </section>  
+</header>
+
+<!-- Main Section -->
+<main class="main-section">
+    <div class="booking-form-container">
+        <div class ="ukraine_promo">
+            <h2>VISIT UKRAINE IN FUTURE</h2>
+        </div>
+        <form class="booking-form" (ngSubmit)="onSubmit()" #bookingForm="ngForm">
+            <div class="form-group">
+                <label for="checkInDate">Check In</label>
+                <input type="date" id="checkInDate" name="checkInDate" ngModel value="09.06.2024">
+            </div>
+            <div class="form-group">
+                <label for="checkOutDate">Check Out</label>
+                <input type="date" id="checkOutDate" name="checkOutDate" ngModel value="09.06.2024">
+            </div>
+            <div class="form-group">
+                <label for="adults">Adults</label>
+                <input type="number" id="adults" name="adults" min="1" max="3" ngModel (change)="onAdultsChange($event)" value="1">
+            </div>
+            <div class="form-group">
+                <label for="children">Children</label>
+                <input type="number" id="children" name="children" min="0" max="2" ngModel (change)="onChildrenChange($event)" value="1">
+            </div>
+            
+            <button type="submit">SEARCH ROOMS</button>
+        </form>
+    </div>
+    <div class="details-section">
+        <div class="block1">
+            <div class ="rooms_description">
+                <h2>ENJOY LIFE & STAY SAFETY!</h2>
+                <p>Rest at the European level in a picturesque area of ​​the capital! Book a room at Favor Park Hotel and get a comfortable orthopedic bed, private bathroom, delicious meals from a modern restaurant and access to all hotel services!</p>
+                <button (click)="navigateToRoomPage()">DETAILS</button>
+            </div>
+        </div>
+    </div>
+    <br>
+    <section id="about" class="about-section">
+        <div class="block2">
+        <div class="about">
+            <h2>FAVOR PARK HOTEL</h2>
+            <p>A hotel that cares not only about the comfort and safety of its guests, but is designed to meet the individual needs of each guest as much as possible</p>
+            <button (click)="navigateToAbout()">ABOUT US</button>
+        </div>
+        </div>
+    </section>
+  </main>
+  
+  <!-- Footer Section -->
+  <footer class="footer">
+    <div class="logo">
+        <img src="assets/logo.svg" alt="Favor Park Hotel Logo">
+    </div>
+    <section id="contacts" class="contacts-section">
+      <h3>Contact Information</h3>
+      <p>6 Samiyla Kishki Street, Kyiv, 03191, Ukraine</p>
+      <p>044 206 0722</p>
+      <p>info&#64;favorparkhotel.com</p>
+      <div class="pet-friendly">
+        <img src="https://favorparkhotel.com/wp-content/uploads/2021/09/logo-pet_friendly.svg" alt="Pet Frienly Hotel"/>
+      </div>
+    </section>
+  </footer>
+
+  <script>
+    $(document).ready(function(){
+      $('.pop-up').on('click', function(){
+        $('#overlay').fadeIn(300); 
+        $('.calendar').fadeIn(300); 
+        let clickedbutton = $("input",$(this).parent()).attr('id');
+        $('.dates').data('type',clickedbutton);
+      });
+      
+      $('table').on('click', function(event){
+        let that=$(event.target);
+        if(that.is('td') && !that.hasClass('notCurMonth') && !that.hasClass('holiday') && !that.hasClass('curDay')){
+          $('td.curDay').toggleClass('curDay');
+          that.toggleClass('curDay');
+        }
+      }); 
+  
+      $('#add_event').on('click', function(){
+        let value= $('td.curDay').html();
+        $('#overlay').fadeOut(300);
+        $('.calendar').fadeOut(300);
+        let id=($('.dates').data()).type;
+        $('#' + id).val(value+" May, 2024");
+      }); 
+  
+      $('#search').on('click', function(e){
+        $('.booking').addClass('is-sent');
+        e.preventDefault();
+      });
+    }); 
+  </script>
+  
+  

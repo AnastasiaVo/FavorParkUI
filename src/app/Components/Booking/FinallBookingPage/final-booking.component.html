@@ -1,0 +1,114 @@
+<header class="header">
+    <section class="navigation">
+    <div class="logo">
+        <img src="assets/logo.svg" alt="Favor Park Hotel Logo">
+    </div>
+    <div class="navbar">
+        <a routerLink="/aboutUs" class="nav-link " >ABOUT US</a>
+        <a routerLink="/rooms"  class="nav-link " (click)="navigateToRoomPage()">ROOM</a>
+        <a routerLink="/booking" class="nav-link " (click)="navigateToBookingPage()" >BOOKING</a>
+        <a routerLink="#contacts" class="nav-link ">CONTACTS</a>
+    </div>
+    <div class="user-profile">
+        <img src="assets/portrait.svg" alt="user icon" class="profile" (click)="navigateToProfileOrLogin()"/>
+    </div>
+    </section>  
+</header>
+
+<main class="main-section">
+    <div class ="guest-information">
+    <div class="personal-information" >
+      <h2 (click)="togglePersonalInformation()">Your personal information</h2>
+        <div *ngIf="showPersonalInformation">
+        <div class="booking-type">
+          <button (click)="bookingForSelf = true; bookingForOther = false">Book for myself</button>
+          <button (click)="bookingForSelf = false; bookingForOther = true">Book on behalf of someone else</button>
+        </div>
+      
+        <div *ngIf="bookingForSelf || bookingForOther">
+          <select>
+            <option>Mr.</option>
+            <option>Ms.</option>
+            <option>Mrs.</option>
+          </select>
+          <input type="text" placeholder="Name" value="Anastasia">
+          <input type="text" placeholder="Surname" value="Voronichenko">
+          <input type="email" placeholder="Email" value="anastasiavoronichenko7@gmail.com">
+          <input type="tel" placeholder="Phone number" value="+380667704110">
+          <input *ngIf="bookingForOther" type="text" placeholder="Corporate Id">
+          <br>
+          <label>Estimated time of arrival (optional)</label>
+          <select>
+            <option>I don't know</option>
+            <option>07:00-10:00</option>
+            <option>10:00-12:00</option>
+            <option>12:00-14:00</option>
+            <option>14:00-16:00</option>
+            <option>16:00-18:00</option>
+            <option>18:00-20:00</option>
+            <option>20:00-22:00</option>
+            <option>22:00-24:00</option>
+          </select>
+        </div>
+      
+        <div *ngIf="bookingForOther">
+          <p>Please enter the details of the travelling guest below:</p>
+          <p>Room1:</p>
+          <select>
+            <option>Mr.</option>
+            <option>Ms.</option>
+            <option>Mrs.</option>
+          </select>
+          <input type="text" placeholder="Name">
+          <input type="text" placeholder="Surname">
+          <input type="email" placeholder="Email">
+        </div>
+        </div>
+    </div>
+    <div class ="payment-type" >
+      <h2 (click)="togglePaymentType()">Please, select your payment type</h2>
+        <div class ="payment-options" *ngIf="showPaymentType">
+        <label>Pay by card on the website</label>
+        <input type ="radio"/>
+
+        <label>Pay by cash in the hotel</label>
+        <input type ="radio"/>
+        </div>
+    </div>
+
+    <div class="checkbox-container">
+      <label><input type="checkbox"> I have read and accept the terms and conditions</label>
+      <label><input type="checkbox"> I have read and accept the data privacy policy</label>
+    </div>
+    
+    <button class="confirm-button" (click)="confirmBooking()">CONFIRM BOOKING</button>
+  </div>
+  <div class="reservation-details">
+    <h2>Your Reservation details</h2>
+    <p>Check in: May 31, 2024, at 14:00</p>
+    <p>Check out: June 01, 2024, at 12:00</p>
+    <p>Standard Double Room</p>
+    <p>Adults: 1</p>
+    <p>Standard Room, Double Bed, Room only</p>
+    <hr>
+    <p class ="total">TOTAL 1424.50 UAH</p>
+  </div>
+    
+    
+
+</main>
+
+<footer class="footer">
+    <div class="logo">
+        <img src="assets/logo.svg" alt="Favor Park Hotel Logo">
+    </div>
+    <section id="contacts" class="contacts-section">
+      <h3>Contact Information</h3>
+      <p>6 Samiyla Kishki Street, Kyiv, 03191, Ukraine</p>
+      <p>044 206 0722</p>
+      <p>info&#64;favorparkhotel.com</p>
+      <div class="pet-friendly">
+        <img src="https://favorparkhotel.com/wp-content/uploads/2021/09/logo-pet_friendly.svg" alt="Pet Frienly Hotel"/>
+      </div>
+    </section>
+</footer>

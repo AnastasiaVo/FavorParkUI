@@ -1,0 +1,38 @@
+.image-slider {
+    position: relative;
+    width: 100%; 
+    height: 500px;
+    overflow: hidden;
+  }
+  
+  .image-slider img {
+    width: 100%;
+    height: auto;
+    display: block;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+  }
+  
+  .image-slider img.fade {
+    opacity: 1;
+  }
+  
+  .image-slider .arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 1;
+    fill: black;
+  }
+  
+  .image-slider .prev {
+    left: 10px;
+  }
+  
+  .image-slider .next {
+    right: 10px;
+  }
+  

@@ -1,0 +1,128 @@
+<header class="header">
+    <section class="navigation">
+    <div class="logo">
+        <img src="assets/logo.svg" alt="Favor Park Hotel Logo">
+    </div>
+    <div class="navbar">
+        <a routerLink="/aboutUs" class="nav-link " >ABOUT US</a>
+        <a routerLink="/rooms"  class="nav-link " (click)="navigateToRoomPage()">ROOM</a>
+        <a href="/booking" class="nav-link " (click)="navigateToBookingPage()" >BOOKING</a>
+        <a href="#contacts" class="nav-link ">CONTACTS</a>
+    </div>
+    <div class="user-profile">
+      <img src="assets/portrait.svg" alt="user icon" class="profile" (click)="navigateToProfileOrLogin()"/>
+    </div>
+    </section>  
+</header>
+
+<main class="main-section">
+    <section class="booking-form-container">
+        <form class="booking-form" (ngSubmit)="onSubmit(); showRooms = true"#bookingForm="ngForm">
+            <div class="form-group">
+                <label for="checkInDate">Check In</label>
+                <input type="date" id="checkInDate" name="checkInDate" ngModel value="09.06.2024">
+            </div>
+            <div class="form-group">
+                <label for="checkOutDate">Check Out</label>
+                <input type="date" id="checkOutDate" name="checkOutDate" ngModel value="09.06.2024">
+            </div>
+            <div class="form-group">
+                <label for="adults">Adults</label>
+                <input type="number" id="adults" name="adults" min="1" max="3" ngModel (change)="onAdultsChange($event)" value="1">
+            </div>
+            <div class="form-group">
+                <label for="children">Children</label>
+                <input type="number" id="children" name="children" min="0" max="2" ngModel (change)="onChildrenChange($event)" value="1">
+            </div>
+        </form>
+    </section>
+    <div class="form-button">
+        <button type="submit" (click)="searchRooms()">SEARCH ROOMS</button>
+    </div>
+    <hr>
+    <div class="image" *ngIf="!showRooms">
+        <img src="https://static.rooms-wizard.com/hotels/8ec9c214-7541-473f-87e7-d32a32371579/big/ed5f0b82-69a1-4acf-8495-5e5f00a98b78.jpeg" alt="booking image"/>
+    </div>
+    
+
+    <div *ngIf="showRooms">
+    <section class="room-list">
+        <h2 class="block-name">Rooms</h2>
+        <!-- Use *ngFor to loop over the rooms and display them -->
+        <!-- <div *ngFor="let room of rooms" class="one-bed"> -->
+        <div class="one-bed">
+            <div class="room-description">
+                <img src="https://favorparkhotel.com/wp-content/uploads/2021/09/ZOL_3481-HDR-Pano_3000px-scaled.jpg" alt="Room image" class="one-bed-image">
+                <div class="room-description-text">
+                    <h3>Standard room with one bed</h3>
+                    <ul>
+                        <li>Room: 1, bed: 1</li>
+                        <li>The area of ​​the room is 23 sq.m</li>
+                        <li>Accommodation: 1 person</li>
+                    </ul>
+                    <button (click)="showMore = !showMore" class="show-more">Room details</button>
+                    <div *ngIf="showMore" class="more-info">
+                        <p>A cozy one-room suite designed for one or two people.
+
+                            Ideal for family trips, business trips or a short stopover if Kyiv is an intermediate point of travel.
+                            
+                            Standard rooms are equipped with double or twin beds, air conditioning and LCD TV.
+                            
+                            The room has a private bathroom with soft towels, slippers and a cosmetic kit. Things can be stored in a roomy closet, and valuables in a reliable safe.
+                            
+                            For business tourists, there is a comfortable work area with a desk and stable high-speed Internet.</p>
+                    </div>
+                </div>
+                <div class="booking">
+                    <h3> 3600 UAH</h3>
+                    <button (click)="bookRoom()" class="room-booking">Book Now</button>
+                </div>
+            </div>
+        </div>
+        <div class="two-bed">
+            <div class="room-description">
+                <img src="https://favorparkhotel.com/wp-content/uploads/2021/09/ZOL_3247-HDR-Pano_3000px-scaled.jpg" alt="Room image" class="one-bed-image">
+            <div class="room-description-text">
+                <h3>Standard room with two beds</h3>
+                <ul>
+                    <li>Room: 1, bed: 2</li>
+                    <li>The area of ​​the room is 23 sq.m</li>
+                    <li>Accommodation: 1 person</li>
+                </ul>
+                <button (click)="showMore = !showMore" class="show-more">Room details</button>
+                <div *ngIf="showMore" class="more-info">
+                    <p>A cozy one-room suite designed for one or two people.
+
+                        Ideal for family trips, business trips or a short stopover if Kyiv is an intermediate point of travel.
+                        
+                        Standard rooms are equipped with double or twin beds, air conditioning and LCD TV.
+                        
+                        The room has a private bathroom with soft towels, slippers and a cosmetic kit. Things can be stored in a roomy closet, and valuables in a reliable safe.
+                        
+                        For business tourists, there is a comfortable work area with a desk and stable high-speed Internet.</p>
+                </div>
+                </div>
+                <div class="booking">
+                    <h3> 3600 UAH</h3>
+                    <button (click)="bookRoom()" class="room-booking">Book Now</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    </div>
+</main>
+
+<footer class="footer">
+    <div class="logo">
+        <img src="assets/logo.svg" alt="Favor Park Hotel Logo">
+    </div>
+    <section id="contacts" class="contacts-section">
+      <h3>Contact Information</h3>
+      <p>6 Samiyla Kishki Street, Kyiv, 03191, Ukraine</p>
+      <p>044 206 0722</p>
+      <p>info&#64;favorparkhotel.com</p>
+      <div class="pet-friendly">
+        <img src="https://favorparkhotel.com/wp-content/uploads/2021/09/logo-pet_friendly.svg" alt="Pet Frienly Hotel"/>
+      </div>
+    </section>
+</footer>

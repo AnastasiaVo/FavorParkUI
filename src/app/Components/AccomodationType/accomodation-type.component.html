@@ -1,0 +1,30 @@
+<div class="container">
+    <h2>Manage Accommodation Types</h2>
+    
+    <div>
+      <label for="name">Name:</label>
+      <input type="text" id="name" [(ngModel)]="newAccomodationType.Name">
+      <label for="numberOfBeds">Number of Beds:</label>
+      <input type="number" id="numberOfBeds" [(ngModel)]="newAccomodationType.NumberOfBeds">
+      <button (click)="createAccomodationType()">Add</button>
+    </div>
+    
+    <ul>
+      <li *ngFor="let type of accomodationTypes">
+        <span>{{ type.Name }} ({{ type.NumberOfBeds }} beds)</span>
+        <button (click)="editAccomodationType(type)">Edit</button>
+        <button (click)="deleteAccomodationType(type.Id)">Delete</button>
+        
+        <div *ngIf="editMode && selectedAccomodationType?.Id === type.Id">
+          <label for="editName">Name:</label>
+          <input type="text" id="editName" [(ngModel)]="selectedAccomodationType!.Name">
+          <label for="editNumberOfBeds">Number of Beds:</label>
+          <input type="number" id="editNumberOfBeds" [(ngModel)]="selectedAccomodationType!.NumberOfBeds">
+          <button (click)="updateAccomodationType(selectedAccomodationType!.Id)">Update</button>
+          <button (click)="cancelEdit()">Cancel</button>
+        </div>
+      </li>
+    </ul>
+  </div>
+  
+  

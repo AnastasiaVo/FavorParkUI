@@ -1,0 +1,69 @@
+<div class="page-container">
+<!-- src/app/components/room/room.component.html -->
+<header class="header">
+  <section class="navigation">
+  <div class="logo">
+      <img src="assets/logo.svg" alt="Favor Park Hotel Logo">
+  </div>
+  <div class="navbar">
+      <a routerLink="/aboutUs" class="nav-link " >ABOUT US</a>
+      <a routerLink="/rooms" class="nav-link ">ROOM</a>
+      <a routerLink="/booking" class="nav-link " (click)="navigateToBookingPage()" >BOOKING</a>
+      <a href="#contacts" class="nav-link ">CONTACTS</a>
+  </div>
+  <div class="user-profile">
+    <img src="assets/portrait.svg" alt="user icon" class="profile" (click)="navigateToProfileOrLogin()"/>
+  </div>
+  </section>  
+</header>
+
+<main class="main-section">
+  <div class ="slider">
+    <app-image-slider></app-image-slider>
+    <div class ="page_top">
+      <h2>CARE ABOUT EVERY GUEST</h2>
+      <p>Comfortable rooms, high quality standards of care for each guest and a great desire to make your stay at the hotel unforgettable!</p>
+  </div>
+  </div>
+  <div class="room-list">
+    <div class="block1">
+      <div class ="standart_room">
+          <h2>STANDARD</h2>
+          <p>A cozy one-room suite designed for one or two people. Ideal for family trips, business trips or a short stopover if Kyiv is an intermediate point of travel</p>
+          <button (click)="viewStandardRoomDetails()">DETAILS</button>
+      </div>
+    </div>
+    <div class="block2">
+      <div class ="business_room">
+          <h2>BUSINESS</h2>
+          <p>A stylish one-room suite that can comfortably accommodate one or two guests. Ideal for family trips or business trips. The room is equipped with all necessary amenities for living</p>
+          <button (click)="viewBusinessRoomDetails()">DETAILS</button>
+      </div>
+    </div>
+    <div class="block3">
+      <div class ="suite_room">
+          <h2>SUITE</h2>
+          <p>An elegant and stylish two-room suite with a separate bedroom and living room, designed for one or two guests</p>
+          <button (click)="viewSuiteRoomDetails()">DETAILS</button>
+      </div>
+    </div>
+  </div>
+</main>
+
+  <!-- Footer Section -->
+<footer class="footer">
+  <div class="logo">
+      <img src="assets/logo.svg" alt="Favor Park Hotel Logo">
+  </div>
+  <section id="contacts" class="contacts-section">
+    <h3>Contact Information</h3>
+    <p>6 Samiyla Kishki Street, Kyiv, 03191, Ukraine</p>
+    <p>044 206 0722</p>
+    <p>info&#64;favorparkhotel.com</p>
+    <div class="pet-friendly">
+      <img src="https://favorparkhotel.com/wp-content/uploads/2021/09/logo-pet_friendly.svg" alt="Pet Frienly Hotel"/>
+    </div>
+  </section>
+</footer>
+</div>
+  

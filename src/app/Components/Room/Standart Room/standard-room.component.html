@@ -1,0 +1,124 @@
+<!-- src/app/components/room/standard-room.component.html -->
+<header class="header">
+    <section class="navigation">
+    <div class="logo">
+        <img src="assets/logo.svg" alt="Favor Park Hotel Logo">
+    </div>
+    <div class="navbar">
+        <a routerLink="/aboutUs" class="nav-link " >ABOUT US</a>
+        <a routerLink="/rooms"  class="nav-link " (click)="navigateToRoomPage()">ROOM</a>
+        <a routerLink="/booking" class="nav-link " (click)="navigateToBookingPage()" >BOOKING</a>
+        <a href="#contacts" class="nav-link ">CONTACTS</a>
+    </div>
+    <div class="user-profile">
+      <img src="assets/portrait.svg" alt="user icon" class="profile" (click)="navigateToProfileOrLogin()"/>
+    </div>
+    </section>  
+  </header>
+  
+  <main class="main-section">
+    <div class ="standardRoomEntry">
+        <div class ="text">
+        <h2>STANDARD</h2>
+        <p>A cozy one-room suite designed for one or two people. Ideal for family trips, business trips or a short stopover if Kyiv is an intermediate point of travel</p>
+        </div>
+    </div>
+    <div class ="about-room">
+        <div class="about-room-text">
+            <h2>ABOUT ROOM</h2>
+            <p>A cozy one-room suite designed for one or two people. Ideal for family trips, business trips or a short stopover if Kyiv is an intermediate point of travel. Standard rooms are equipped with double or twin beds, air conditioning and LCD TV.</p>
+            <p>The room has a private bathroom with soft towels, slippers and a cosmetic kit. Things can be stored in a roomy closet, and valuables in a reliable safe. For business tourists, the room has a comfortable work area with a desk and stable high-speed Internet.</p>
+        </div>
+        <img src ="https://favorparkhotel.com/wp-content/uploads/2021/09/ZOL_3377_3000px-scaled.jpg" alt ="Standard Room Photo" class="about-room-photo"/>
+    </div>
+
+    <div class ="rooms-list">
+        <h2 class ="block-name">Rooms</h2>
+        <div class="one-bed">
+            <div class="room-description">
+                <img src="https://favorparkhotel.com/wp-content/uploads/2021/09/ZOL_3481-HDR-Pano_3000px-scaled.jpg" alt="Room image" class="one-bed-image">
+            <div class="room-description-text">
+                <h3>"Standard" room with one bed</h3>
+                <ul>
+                    <li>Room: 1, bed: 1</li>
+                    <li>The area of ​​the room is 23 sq.m</li>
+                    <li>View from the room: City view</li>
+                </ul>
+                <button (click)="showMore = !showMore" class="show-more">Room details</button>
+                <div *ngIf="showMore" class="more-info">
+                    <p>Single bed - 110 x 200 cm
+                        The area of ​​the room is 23 sq.m
+                        LCD TV 40 inches
+                        Work area and high-speed Internet
+                        The size of the safe is 43 x 20 x 35 cm</p>
+                </div>
+                </div>
+                <div class ="booking">
+                    <h3>from 1800 UAH</h3>
+                    <button (click)="setRoomId(2) ; navigateToBookingST()" class ="room-booking">Check Dates & Availability</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="two-bed">
+            <div class="room-description">
+                <img src="https://favorparkhotel.com/wp-content/uploads/2021/09/ZOL_3247-HDR-Pano_3000px-scaled.jpg" alt="Room image" class="one-bed-image">
+            <div class="room-description-text">
+                <h3>"Standard" room with two beds</h3>
+                <ul>
+                    <li>Room: 1, bed: 2</li>
+                    <li>The area of ​​the room is 23 sq.m</li>
+                    <li>View from the room: City view</li>
+                </ul>
+                <button (click)="showMore = !showMore" class="show-more">Room details</button>
+                <div *ngIf="showMore" class="more-info">
+                    <p>Single bed - 110 x 200 cm
+                        The area of ​​the room is 23 sq.m
+                        LCD TV 40 inches
+                        Work area and high-speed Internet
+                        The size of the safe is 43 x 20 x 35 cm</p>
+                </div>
+                </div>
+                <div class ="booking">
+                    <h3>from 1800 UAH</h3>
+                    <button (click)="setRoomId(6) ; navigateToBookingST()" class ="room-booking">Check Dates & Availability</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="other-room-list">
+        <h2 class ="block-name">Other rooms</h2>
+      <div class="block2">
+        <div class ="business_room">
+            <h2>BUSINESS</h2>
+            <p>A stylish one-room suite that can comfortably accommodate one or two guests. Ideal for family trips or business trips. The room is equipped with all necessary amenities for living</p>
+            <button (click)="viewBusinessRoomDetails()">DETAILS</button>
+        </div>
+      </div>
+      <div class="block3">
+        <div class ="suite_room">
+            <h2>SUITE</h2>
+            <p>An elegant and stylish two-room suite with a separate bedroom and living room, designed for one or two guests</p>
+            <button (click)="viewSuiteRoomDetails()">DETAILS</button>
+        </div>
+      </div>
+    </div>
+  </main>
+  
+    <!-- Footer Section -->
+  <footer class="footer">
+    <div class="logo">
+        <img src="assets/logo.svg" alt="Favor Park Hotel Logo">
+    </div>
+    <section id="contacts" class="contacts-section">
+      <h3>Contact Information</h3>
+      <p>6 Samiyla Kishki Street, Kyiv, 03191, Ukraine</p>
+      <p>044 206 0722</p>
+      <p>info&#64;favorparkhotel.com</p>
+      <div class="pet-friendly">
+        <img src="https://favorparkhotel.com/wp-content/uploads/2021/09/logo-pet_friendly.svg" alt="Pet Frienly Hotel"/>
+      </div>
+    </section>
+  </footer>
